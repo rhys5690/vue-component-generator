@@ -13,7 +13,8 @@ module.exports = class extends Generator {
     this.parentDirectory = this.options.arguments[1] ? this.options.arguments[1] : 'components';
     this.className = this.componentName
       .split(/(?=[A-Z])/)
-      .map(name => name.toLowerCase());
+      .map(name => name.toLowerCase())
+      .join('');
   }
 
   paths() {
