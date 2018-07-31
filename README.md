@@ -9,7 +9,7 @@ npm install -g yo
 npm install -g generator-vue-single-file-component
 ```
 
-Then generate your a new component in src/components run:
+To generate your first component in src/components run:
 
 ```bash
 yo vue-single-file-component <YourComponentName />
