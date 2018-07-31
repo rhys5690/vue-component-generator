@@ -11,6 +11,9 @@ module.exports = class extends Generator {
     });
     this.componentName = this.options.arguments[0];
     this.parentDirectory = this.options.arguments[1] ? this.options.arguments[1] : 'components';
+    this.className = this.componentName
+      .split(/(?=[A-Z])/)
+      .map(name => name.toLowerCase());
   }
 
   paths() {
@@ -22,7 +25,8 @@ module.exports = class extends Generator {
       this.templatePath(`MyComponent/MyComponent.vue`),
       this.destinationPath(`${this.componentName}.vue`),
       {
-        name: this.componentName
+        name: this.componentName,
+        className: this.className
       }
     );
   }
