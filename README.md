@@ -27,6 +27,12 @@ To generate a new component inside src/pages/booking run:
 yo vue-single-file-component <YourComponentName /> pages/booking
 ```
 
+To generate a new component inside src/shared/components run:
+
+```bash
+yo vue-single-file-component <YourComponentName /> shared/components
+```
+
 ## License
 
 Apache-2.0 © [rhys5690]()
