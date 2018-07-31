@@ -7,8 +7,7 @@
 <script>
 export default {
   name: '<%= name %>',
-  props: {
-  }
+  components: {}
 };
 </script>
 

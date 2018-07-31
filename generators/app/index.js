@@ -10,15 +10,16 @@ module.exports = class extends Generator {
       required: true
     });
     this.componentName = this.options.arguments[0];
+    this.parentDirectory = this.options.arguments[1] ? this.options.arguments[1] : 'components';
   }
 
   paths() {
-    this.destinationRoot(`${this.destinationRoot()}/src/components/`);
+    this.destinationRoot(`${this.destinationRoot()}/src/${this.parentDirectory}/${this.componentName}`);
   }
 
   writing() {
     this.fs.copyTpl(
-      this.templatePath(`MyComponent.vue`),
+      this.templatePath(`MyComponent/MyComponent.vue`),
       this.destinationPath(`${this.componentName}.vue`),
       {
         name: this.componentName
